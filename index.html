@@ -1,0 +1,841 @@
+ <!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SOFTDESK - Official student software society of Software Engineering Department, UET Taxila. Empowering students with hands-on knowledge of current software technologies since 2010.">
+    <meta name="keywords" content="SOFTDESK, UET Taxila, Software Engineering, Student Society, Programming, Workshops, Tech Events, Saad Abdullah">
+    <meta name="author" content="SOFTDESK UET Taxila">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#FF6600">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SOFTDESK - Official Student Software Society | UET Taxila">
+    <meta property="og:description" content="Founded in 2010 within the Department of Software Engineering at UET Taxila, SOFTDESK has grown from a small student initiative into a leading technical society.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://softdesk.org">
+    <meta property="og:image" content="https://softdesk.org/images/softdesk-logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="SOFTDESK UET Taxila">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SOFTDESK - Official Student Software Society | UET Taxila">
+    <meta name="twitter:description" content="Founded in 2010 within the Department of Software Engineering at UET Taxila, SOFTDESK has grown from a small student initiative into a leading technical society.">
+    <meta name="twitter:image" content="https://softdesk.org/images/softdesk-logo.jpg">
+    
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SOFTDESK",
+        "alternateName": "SoftDesk UET Taxila",
+        "url": "https://softdesk.org",
+        "logo": "https://softdesk.org/images/softdesk-logo.jpg",
+        "description": "Official student software society of Software Engineering Department, UET Taxila. Empowering students with hands-on knowledge of current software technologies since 2010.",
+        "foundingDate": "2010",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Software Engineering Department",
+            "addressLocality": "Taxila",
+            "addressRegion": "Punjab",
+            "postalCode": "47080",
+            "addressCountry": "Pakistan"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+92-51-9047747",
+            "email": "softdeskuettaxila.pk@gmail.com",
+            "contactType": "General Inquiry"
+        },
+        "member": [
+            {
+                "@type": "Person",
+                "name": "Saad Abdullah",
+                "jobTitle": "President",
+                "sameAs": [
+                    "linkedin.com/in/saad-abdullah-923a752b3",
+                    "github.com/SaadAbdullah72"
+                ]
+            },
+            {
+                "@type": "Person",
+                "name": "Engr. Dr. Ali Javed",
+                "jobTitle": "Advisor",
+                "description": "Associate Professor, Department of Software Engineering, UET Taxila"
+            }
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/company/softdeskuett/",
+            "https://www.facebook.com/SoftDesk/",
+            "https://www.instagram.com/softdesk_uett/",
+            "https://wa.me/923006306577"
+        ]
+    }
+    </script>
+    
+    <title>SOFTDESK - Official Student Software Society | UET Taxila</title>
+    <link rel="canonical" href="https://softdesk.org">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preload" href="./images/softdesk-logo.jpg" as="image">
+  
+  
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preload" href="./css/styles.css" as="style">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Framer Motion -->
+    <!-- <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js" defer></script> -->
+</head>
+<body class="dark-mode">
+    <!-- Enhanced Particle Background -->
+    <div class="animated-background">
+        <div class="particles-container"></div>
+        <div class="ambient-bg"></div>
+        <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./images/softdesk-logo.jpg" alt="SOFTDESK Logo" class="logo-image" loading="eager">
+                <div class="logo-text-container">
+                    <span class="logo-text">SOFTDESK</span>
+                    <span class="logo-subtitle">UET Taxila</span>
+                </div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                 
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#cabinet" class="nav-link">Cabinet</a></li>
+                <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="http://msplab.uettaxila.edu.pk/" target="_blank" class="nav-link" rel="noopener noreferrer">Our Workspace</a></li>
+            </ul>
+            <!-- Floating Cursor -->
+            <div class="nav-cursor" id="navCursor"></div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle theme" role="switch" aria-checked="true">
+                    <div class="theme-toggle-track">
+                        <div class="theme-toggle-thumb">
+                            
+                            <i class="fas fa-sun light-icon"></i>
+                            <i class="fas fa-moon dark-icon"></i>
+                        </div>
+                    </div>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <div class="logo-animation">
+                        <h1 class="hero-title two-tone-orange">SOFT<span class="accent">DESK</span></h1>
+                        <div class="hero-subtitle">UET Taxila</div>
+                    </div>
+                </div>
+                <div class="hero-tagline">
+                    <span class="typewriter" id="typewriter" aria-live="polite"></span>
+                    <button id="rotator-pause" class="rotator-control" aria-label="Pause text rotator" style="display: none;">⏸️</button>
+                </div>
+                <div class="hero-description">
+                    <p>Established in 2010, SoftDesk is the only technical society of the Software Engineering Department, UET Taxila. We monitor emerging trends, help students stay informed, and organize impactful events, workshops, and competitions.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-secondary hero-btn" style="padding-left: 60px;">
+                        <span>Join Us</span>
+                        <i class="fas fa-arrow-right " ></i>
+                    </a>
+                    <a href="#events" class="btn btn-secondary">
+                        <span>Explore Events</span>
+                        <i class="fas fa-calendar"></i>
+                    </a>
+                    <a href="#cabinet" class="btn btn-outline">
+                        <span>Meet the Team</span>
+                        <i class="fas fa-users"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-card" style="--delay: 0s">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="floating-card" style="--delay: 0.5s">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="floating-card" style="--delay: 1s">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="floating-card" style="--delay: 1.5s">
+                        <i class="fas fa-database"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <button class="scroll-btn" aria-label="Scroll to About section">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </button>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title two-tone-orange">About SOFT<span class="accent">DESK</span></h2>
+                <div class="section-subtitle">Empowering Software Engineers Since 2010</div>
+            </div>
+            <div class="about-content">
+                <div class="about-cards">
+                    <div class="about-card history-card power-element unbox-animation" data-aos="fade-up" data-aos-delay="100" style="animation-delay: 0.1s">
+                        <div class="card-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>History</h3>
+                        <p>Founded in 2010 within the Department of Software Engineering at UET Taxila, SOFTDESK has grown from a small student initiative into a leading technical society. For over a decade we've hosted workshops, seminars, and national-level competitions such as the UET Taxila Olympiad, connecting students with academia and industry.</p>
+                    </div>
+                    <div class="about-card mission-card power-element unbox-animation" data-aos="fade-up" data-aos-delay="200" style="animation-delay: 0.2s">
+                        <div class="card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Mission</h3>
+                        <p>To empower students with hands-on knowledge of current software technologies, foster collaboration between faculty and students, and provide platforms for professional growth through events, mentorship, and projects.</p>
+                    </div>
+                    <div class="about-card vision-card power-element unbox-animation" data-aos="fade-up" data-aos-delay="300" style="animation-delay: 0.3s">
+                        <div class="card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Vision</h3>
+                        <p>To be the prime student-led hub of software innovation at UET Taxila recognized nationally for producing industry-ready graduates, organizing impactful events, and driving technology awareness in academia.</p>
+                    </div>
+                </div>
+                
+                <!-- Advisor Section -->
+                <div class="advisor-section" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="advisor-section-title">Our Advisor</h3>
+                    <div class="advisor-card">
+                        <div class="advisor-image">
+                            <img src="./images/team/advisor.jpg" alt="Engr. Dr. Ali Javed - Advisor" loading="lazy">
+                            <div class="advisor-image-overlay"></div>
+                        </div>
+                        <div class="advisor-info">
+                            <h4 class="advisor-name">Engr. Dr. Ali Javed</h4>
+                            <p class="advisor-title">Associate Professor, Dept. of Software Engineering, UET Taxila</p>
+                            <p class="advisor-description">Advisor to SOFTDESK — supporting academic direction, mentorship and collaboration with industry partners.</p>
+                            
+                            <h5 style="margin-top: 25px; margin-bottom: 15px; color: var(--accent-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Connect with Advisor</h5>
+                            <div class="advisor-links">
+                                <a href="http://msplab.uettaxila.edu.pk" target="_blank" class="social-link researchgate" aria-label="ResearchGate Profile" title="MSP Lab" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cabinet Section -->
+    <section id="cabinet" class="cabinet-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cabinet 2026–27</h2>
+                <div class="section-subtitle">Meet Our Leadership Team</div>
+            </div>
+            
+            <!-- President Card (Featured) -->
+            <div class="president-section">
+                <div class="president-card">
+                    <div class="president-bg"></div>
+                    <div class="president-content">
+                        <div class="president-avatar">
+                            <img src="./images/team/President.jpeg" alt="Saad Abdullah - President" loading="lazy" />
+                            <div class="avatar-glow"></div>
+                        </div>
+                        <div class="president-info">
+                            <div class="president-badge">President</div>
+                            <h3 class="president-name">Saad Abdullah</h3>
+                            <p class="president-title">Leading Innovation & Excellence</p>
+                            <div class="president-links">
+                                <a href=" linkedin.com/in/saad-abdullah-923a752b3" target="_blank" class="social-link linkedin" aria-label="LinkedIn Profile" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="github.com/SaadAbdullah72" target="_blank" class="social-link github" aria-label="GitHub Profile" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://wa.me/923275784309" target="_blank" class="social-link whatsapp" aria-label="WhatsApp Contact" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Cabinet Members -->
+            <div class="cabinet-members">
+                <h3 class="members-section-title">Our Cabinet Team</h3>
+                <div class="members-ribbon-container">
+                    <div class="members-ribbon" id="membersRibbon">
+                        <div class="member-card" data-role="Vice President">
+                            <div class="member-avatar">
+                                <img src="./images/team/Vice_President.jpeg" alt="Faraiha Tariq - Vice President" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Faraiha Tariq</h4>
+                                <p>Vice President</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Supports the President in strategic planning and organizational leadership</p>
+                            </div>
+                        </div>
+                    
+                        <div class="member-card" data-role="General Secretary">
+                            <div class="member-avatar">
+                                <img src="./images/team/General_Secretary.jpeg" alt="Samia Zia - General Secretary" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Samia Zia</h4>
+                                <p>General Secretary</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Manages administrative affairs and coordinates society activities</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card" data-role="Joint Secretary">
+                            <div class="member-avatar">
+                                <img src="./images/team/Joint_Secretary.jpeg" alt="Hashir Mohi-ud-din - Joint Secretary" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Hashir Mohi-ud-din</h4>
+                                <p>Joint Secretary</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Assists in administrative duties and event coordination</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card" data-role="Logistics Head">
+                            <div class="member-avatar">
+                                <img src="./images/team/Logistic_Head.jpeg" alt="Huzaifa Javid - Logistics Head" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Huzaifa Javid</h4>
+                                <p>Logistics Head</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Handles event logistics, venue management, and resource allocation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card" data-role="Media Head">
+                            <div class="member-avatar">
+                                <img src="./images/team/Media_Head.jpeg" alt="Ameer Hussain Tariq - Media Head" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Ameer Hussain Tariq</h4>
+                                <p>Media Head</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Manages social media presence and digital marketing strategies</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card" data-role="Graphics Head">
+                            <div class="member-avatar">
+                                <img src="./images/team/Graphics_Head.jpeg" alt="Ayesha Zia - Graphics Head" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Ayesha Zia</h4>
+                                <p>Graphics Head</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Creates visual content, designs, and branding materials</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card" data-role="Finance Head">
+                            <div class="member-avatar">
+                                <img src="./images/team/Finance_Head.jpeg" alt="Nazeef ul Hassan - Finance Head" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Nazeef ul Hassan Qureshi</h4>
+                                <p>Finance Head</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Manages budget, financial planning, and sponsorship coordination</p>
+                            </div>
+                        </div>
+                    
+                        <div class="member-card" data-role="Documentation Head">
+                            <div class="member-avatar">
+                                <img src="./images/team/Documentation_Head.jpeg" alt="Manal Atif - Documentation Head" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Manal Atif</h4>
+                                <p>Documentation Head</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Maintains records, reports, and official documentation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card" data-role="IT Head">
+                            <div class="member-avatar">
+                                <img src="./images/team/IT_Head.jpeg" alt="Sadaf Javed - IT Head" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Sadaf Javed</h4>
+                                <p>IT Head</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Manages technical infrastructure and digital platforms</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card" data-role="Alumni Head">
+                            <div class="member-avatar">
+                                <img src="./images/team/Alumni_Head.jpeg" alt="Muhammad Zain - Alumni Head" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Muhammad Zain</h4>
+                                <p>Alumni Head</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Maintains alumni relations and networks for mentorship opportunities</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card" data-role="Decor Head">
+                            <div class="member-avatar">
+                                <img src="./images/team/Decor_Head (2).jpeg" alt="Eimaan Tariq - Decor Head" loading="lazy" />
+                                <div class="member-hover-overlay"></div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Eimaan Tariq</h4>
+                                <p>Decor Head</p>
+                            </div>
+                            <div class="member-role-desc">
+                                <p>Handles event decoration and aesthetic arrangements</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ribbon Navigation Controls -->
+                    <!-- <div class="ribbon-controls">
+                        <button class="ribbon-scroll-btn ribbon-prev" id="ribbonPrev" aria-label="Previous members">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="ribbon-scroll-btn ribbon-next" id="ribbonNext" aria-label="Next members">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Events & Activities</h2>
+                <div class="section-subtitle">Our Journey Through Time (2011-2025)</div>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <!-- Timeline Line -->
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item" data-year="2011">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2011</div>
+                            <h4>Android Workshop & Talent Hunt</h4>
+                            <p>Launched our first technical workshop focusing on Android development and organized our inaugural talent hunt competition.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2012">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2012</div>
+                            <h4>UET Taxila Olympiad</h4>
+                            <p>Established our flagship competition that became an annual tradition, challenging students in various technical domains.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2013">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2013</div>
+                            <h4>Game Development Seminar</h4>
+                            <p>Introduced game development concepts and technologies to aspiring student developers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2015">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2015</div>
+                            <h4>Software Testing Workshop</h4>
+                            <p>Focused on quality assurance and testing methodologies in software development.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2016">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2016</div>
+                            <h4>Techsalvo</h4>
+                            <p>A comprehensive tech festival showcasing innovations and technological advancements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2023">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023</div>
+                            <h4>Deepfakes Workshop & Speech Detection</h4>
+                            <p>Addressed emerging AI challenges with workshops on deepfakes and speech deepfakes detection technologies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2024">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024</div>
+                            <h4>Major Events Series</h4>
+                            <p>Cyber Crime Seminar, Alumni Lunch, BizDesk, Open House & Job Fair, Evenings with SoftDesk, Roadmap Workshop, LinkedIn Workshop</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2025">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025</div>
+                            <h4>Tech Spectrum 2.0</h4>
+                            <p>Our latest flagship event showcasing cutting-edge technologies and innovations in software engineering.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Star Background Animation -->
+                <div class="timeline-stars">
+                    <div class="star" style="--delay: 0s; --size: 3px; left: 10%; top: 20%;"></div>
+                    <div class="star" style="--delay: 1s; --size: 4px; left: 20%; top: 40%;"></div>
+                    <div class="star" style="--delay: 2s; --size: 2px; left: 30%; top: 60%;"></div>
+                    <div class="star" style="--delay: 0.5s; --size: 5px; left: 40%; top: 80%;"></div>
+                    <div class="star" style="--delay: 1.5s; --size: 3px; left: 50%; top: 30%;"></div>
+                    <div class="star" style="--delay: 2.5s; --size: 4px; left: 60%; top: 50%;"></div>
+                    <div class="star" style="--delay: 0.8s; --size: 2px; left: 70%; top: 70%;"></div>
+                    <div class="star" style="--delay: 1.8s; --size: 3px; left: 80%; top: 90%;"></div>
+                    <div class="star" style="--delay: 2.2s; --size: 4px; left: 90%; top: 25%;"></div>
+                    <div class="star" style="--delay: 0.3s; --size: 2px; left: 15%; top: 75%;"></div>
+                    <div class="star" style="--delay: 1.3s; --size: 3px; left: 25%; top: 15%;"></div>
+                    <div class="star" style="--delay: 2.8s; --size: 5px; left: 35%; top: 85%;"></div>
+                    <div class="star" style="--delay: 0.7s; --size: 3px; left: 45%; top: 45%;"></div>
+                    <div class="star" style="--delay: 1.7s; --size: 4px; left: 55%; top: 65%;"></div>
+                    <div class="star" style="--delay: 2.3s; --size: 2px; left: 65%; top: 35%;"></div>
+                    <div class="star" style="--delay: 0.9s; --size: 3px; left: 75%; top: 55%;"></div>
+                    <div class="star" style="--delay: 1.9s; --size: 4px; left: 85%; top: 10%;"></div>
+                    <div class="star" style="--delay: 2.7s; --size: 2px; left: 95%; top: 95%;"></div>
+                    <div class="star" style="--delay: 0.4s; --size: 5px; left: 5%; top: 50%;"></div>
+                    <div class="star" style="--delay: 1.4s; --size: 3px; left: 95%; top: 5%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                <div class="section-subtitle">Moments That Define Us</div>
+                <div class="gallery-container">
+                    <div class="gallery-grid" id="galleryGrid">
+                        <div class="gallery-item">
+                            <img src="./images/gallery/tech-spectrum 2.0 .jpg" alt="Tech Spectrum 2.0" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Tech Spectrum 2.0</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/deepfakes-workshop.jpg" alt="Deepfakes Workshop" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Deepfakes Workshop</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/alumni-lunch.jpg" alt="Alumni Lunch" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Alumni Lunch</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/olympiad.jpg" alt="UET Taxila Olympiad" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>UET Taxila Olympiad</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/hackxila.png" alt="HackXila Hackathon" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>HackXila Hackathon</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/linkedin-workshop.jpg" alt="LinkedIn Workshop" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>LinkedIn Workshop</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/BIZDESK 2024.jpg" alt="BizDesk 2024" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>BizDesk 2024</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/Game Development Seminar 2013.jpg" alt="Game Dev Seminar" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Game Dev Seminar 2013</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/Evenings with SoftDesk 2024.jpg" alt="Evenings with SoftDesk" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Evenings with SoftDesk</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/from campus to corporate.png" alt="Campus to Corporate" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Campus to Corporate</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/general induction.png" alt="General Induction" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>General Induction</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/job-fair.jpg" alt="Job Fair" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Job Fair</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/Talent Hunt 2011.jpg" alt="Talent Hunt 2011" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Talent Hunt 2011</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/tech-spectrum advacened 2.0 .jpg" alt="Tech Spectrum Advanced 2.0" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Tech Spectrum Advanced 2.0</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/tech-spectrum.jpg" alt="Tech Spectrum" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Tech Spectrum</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/Techsalvo 2016.jpg" alt="Techsalvo 2016" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Techsalvo 2016</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/Softwaretesting.jpg" alt="Software Testing Workshop 2015" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Software Testing Workshop 2015</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="./images/gallery/workshop-1.jpg" alt="Workshop" loading="lazy" />
+                            <div class="gallery-overlay">
+                                <h4>Workshop</h4>
+                                <button class="gallery-expand" aria-label="View full image"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery Floating Cursor -->
+                <div class="gallery-cursor" id="galleryCursor"></div>
+            </div>
+        </section>
+        </div>
+        
+        <!-- Gallery Lightbox Modal -->
+        <div class="gallery-lightbox" id="galleryLightbox">
+            <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+            <div class="lightbox-content">
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+                    <i class="fas fa-times"></i>
+                </button>
+                <img src="" alt="" id="lightboxImage" />
+                <div class="lightbox-info">
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxDescription"></p>
+                </div>
+                <div class="lightbox-nav">
+                    <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-nav-btn lightbox-next" id="lightboxNext" aria-label="Next image">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Footer Section -->
+    <footer id="contact" class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>SOFTDESK</h3>
+                        <p>The official student software society of Software Engineering Department, UET Taxila</p>
+                        <div class="footer-social">
+                            <a href="https://www.linkedin.com/company/softdeskuett/" target="_blank" class="social-btn linkedin" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.facebook.com/SoftDesk/" target="_blank" class="social-btn facebook" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/softdesk_uett/" target="_blank" class="social-btn instagram" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/923006306577" target="_blank" class="social-btn whatsapp" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Information</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+92519047747">051-9047747</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:softdeskuettaxila.pk@gmail.com">softdeskuettaxila.pk@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Software Engineering Department<br>UET Taxila, Punjab, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 SOFTDESK UET Taxila. All rights reserved.</p>
+                    <p>Designed & Developed with <i class="fas fa-heart"></i> by SOFTDESK IT Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS (Animate On Scroll) Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Enhanced Scripts -->
+    <script src="./js/enhanced-script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+            offset: 120,
+            disable: function() {
+                return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            }
+        });
+        
+        // Performance optimization: Preload critical images
+        const criticalImages = [
+            './images/softdesk-logo.jpg',
+            './images/team/president.png',
+            './images/team/advisor.jpg'
+        ];
+        
+        criticalImages.forEach(src => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = src;
+            document.head.appendChild(link);
+        });
+    </script>
+</body>
+</html>
