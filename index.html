@@ -129,6 +129,17 @@
     />
     <link rel="preload" href="./css/styles.css" as="style" />
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Apply saved theme before first paint to avoid a flash of the wrong theme -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("softdesk-theme") === "light") {
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -166,6 +177,15 @@
         </nav>
 
         <div class="nav-controls">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle light and dark mode"
+            aria-pressed="false"
+          >
+            <i class="fas fa-sun theme-icon-sun" aria-hidden="true"></i>
+            <i class="fas fa-moon theme-icon-moon" aria-hidden="true"></i>
+          </button>
           <button
             class="nav-toggle"
             id="navToggle"
@@ -843,5 +863,6 @@
     </button>
 
     <script src="./js/enhanced-script.js"></script>
+    <script src="./js/theme-toggle.js"></script>
   </body>
 </html>

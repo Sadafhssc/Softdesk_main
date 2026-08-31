@@ -184,3 +184,48 @@ function initBackToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
+/* =========================================================
+   SOFTDESK — Light / Dark theme toggle
+   Persists the user's choice in localStorage and updates the
+   mobile browser chrome color to match the active theme.
+   ========================================================= */
+(function () {
+  "use strict";
+
+  var STORAGE_KEY = "softdesk-theme";
+  var root = document.documentElement;
+  var toggleBtn = document.getElementById("themeToggle");
+  var metaTheme = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(theme) {
+    if (theme === "light") {
+      root.setAttribute("data-theme", "light");
+      if (metaTheme) metaTheme.setAttribute("content", "#faf9f6");
+    } else {
+      root.removeAttribute("data-theme");
+      if (metaTheme) metaTheme.setAttribute("content", "#060605");
+    }
+    if (toggleBtn) {
+      toggleBtn.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
+    }
+  }
+
+  function currentTheme() {
+    return root.getAttribute("data-theme") === "light" ? "light" : "dark";
+  }
+
+  // Sync UI state with whatever the anti-flash inline script already applied.
+  applyTheme(currentTheme());
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", function () {
+      var next = currentTheme() === "light" ? "dark" : "light";
+      applyTheme(next);
+      try {
+        localStorage.setItem(STORAGE_KEY, next);
+      } catch (e) {
+        /* localStorage unavailable — theme still applies for this session */
+      }
+    });
+  }
+})();
