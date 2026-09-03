@@ -895,6 +895,123 @@ html[data-theme="light"] .theme-toggle .theme-icon-moon { display: inline-block;
 .lightbox-prev { left: 20px; }
 .lightbox-next { right: 20px; }
 
+/* ---------- Certificate Verification ---------- */
+.verify-section .container {
+    max-width: 880px;
+    text-align: center;
+}
+.verify-section .section-header { margin: 0 auto 20px; text-align: center; }
+.verify-section .section-title { padding-bottom: 14px; }
+.verify-section .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.verify-badge {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+    box-shadow: 0 0 0 8px var(--accent-soft), 0 12px 28px var(--accent-soft-strong);
+    color: #0a0a0a;
+    font-size: 1.5rem;
+}
+
+.verify-lede {
+    max-width: 560px;
+    margin: 0 auto 52px;
+    color: var(--text-muted);
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+.verify-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    text-align: left;
+}
+.verify-card {
+    background: var(--bg-elevated);
+    padding: 36px 28px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.25s var(--ease), transform 0.3s var(--ease);
+}
+.verify-card:hover { transform: translateY(-4px); }
+.verify-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, var(--accent-glow), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease);
+    pointer-events: none;
+}
+.verify-card:hover::before { opacity: 1; }
+.verify-card i {
+    position: relative;
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-soft-strong);
+    transition: transform 0.3s var(--ease-out);
+}
+.verify-card:hover i { transform: translateY(-3px) scale(1.06); }
+.verify-card h3 { font-size: 1.05rem; margin-bottom: 10px; position: relative; }
+.verify-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    position: relative;
+    margin: 0;
+}
+
+.verify-statement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 560px;
+    margin: 44px auto 0;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: 0.88rem;
+}
+.verify-statement i { color: var(--accent); font-size: 0.9rem; }
+
+@media (max-width: 1024px) {
+    .verify-lede { max-width: 480px; }
+}
+
+@media (max-width: 860px) {
+    .verify-grid { grid-template-columns: 1fr; }
+    .verify-card { text-align: center; }
+    .verify-card i { margin-left: auto; margin-right: auto; }
+}
+
+@media (max-width: 767px) {
+    .verify-badge { width: 56px; height: 56px; font-size: 1.25rem; }
+    .verify-lede { font-size: 0.96rem; margin-bottom: 40px; }
+    .verify-statement { flex-direction: column; gap: 6px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .verify-card { padding: 28px 22px; }
+    .verify-statement { font-size: 0.82rem; padding-top: 24px; }
+}
+
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid var(--border); padding: 64px 0 0; }
 .footer-grid {
