@@ -989,6 +989,7 @@ html[data-theme="light"] .theme-toggle .theme-icon-moon { display: inline-block;
 .verify-address-title {
   margin: 0 0 1rem;
   font-size: 1.1rem;
+  color:#ff6a00;
 }
 
 .verify-address-title i {
@@ -1035,7 +1036,6 @@ html[data-theme="light"] .theme-toggle .theme-icon-moon { display: inline-block;
   margin-top: 1rem;
   font-size: 0.95rem;
   text-decoration: underline;
-  color:#ff6a00
 }
 
 @media (max-width: 480px) {
