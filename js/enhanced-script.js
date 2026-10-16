@@ -229,3 +229,19 @@ function initBackToTop() {
     });
   }
 })();
+document.getElementById("copy-address-btn")?.addEventListener("click", async function () {
+  const address = document.getElementById("softdesk-address").textContent.trim();
+  const label = this.querySelector("span");
+  try {
+    await navigator.clipboard.writeText(address);
+    label.textContent = "Copied!";
+  } catch (e) {
+    label.textContent = "Press Ctrl+C";
+    const range = document.createRange();
+    range.selectNodeContents(document.getElementById("softdesk-address"));
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+  setTimeout(() => (label.textContent = "Copy"), 2000);
+});
